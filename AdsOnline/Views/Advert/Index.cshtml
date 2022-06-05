@@ -1,0 +1,53 @@
+﻿@model List<AdsOnline.Models.Entities.Advert>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card mb-4">
+    <div class="card-header" style="display:flex; justify-content:space-between; align-items:center">
+        <i class="fas fa-table me-1"></i>
+        <span style="font-weight:bold;">İlan Listesi</span>
+        <a href="/Advert/CreateAdvert" class="btn btn-primary">Yeni İlan</a>
+    </div>
+
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Başlık</th>
+                    <th>Açıklama</th>
+                    <th>Fiyat</th>
+                    <th>İlan Tarihi</th>
+                    <th>Durum</th>
+                    <th>İmage</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var advert in Model)
+                {
+                    <tr>
+                        <td>@advert.Id</td>
+                        <td>@advert.Title</td>
+                        <td>@advert.Description</td>
+                        <td>@advert.Price</td>
+                        <td>@advert.AdvertDate</td>
+                        <td>@advert.Status</td>
+                        <td>@advert.Image</td>
+                        <td>@advert.Category.Name</td>
+
+                        <td><a href="/Advert/DeleteAdvert/@advert.Id" class="btn btn-danger">Sil</a></td>
+                        <td><a href="/Advert/GetAdvertDetail/@advert.Id" class="btn btn-primary">Detay</a></td>
+                        <td><a href="/Advert/GetAdvert/@advert.Id" class="btn btn-success">Güncelle</a></td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

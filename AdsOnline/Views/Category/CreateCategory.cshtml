@@ -1,0 +1,17 @@
+﻿@model AdsOnline.Models.Entities.Category
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Kategori Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Kategori Adı:")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control mt-2" })
+    @Html.Label("Kategori Açıklaması:", new { @class ="mt-2"})
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control mt-2"})
+    <button class="btn btn-info mt-3">Kaydet</button>
+
+</form>
+
