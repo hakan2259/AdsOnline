@@ -35,7 +35,10 @@
                         <td>@advert.Price</td>
                         <td>@advert.AdvertDate</td>
                         <td>@advert.Status</td>
-                        <td>@advert.Image</td>
+                        <td>
+                            <img src="@advert.Image" alt="Alternate Text" style="width:100px; height:auto;" />
+                        
+                        </td>
                         <td>@advert.Category.Name</td>
 
                         <td><a href="/Advert/DeleteAdvert/@advert.Id" class="btn btn-danger">Sil</a></td>

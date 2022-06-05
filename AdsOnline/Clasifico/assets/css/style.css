@@ -5085,7 +5085,7 @@ div#mCSB_1_container{
 
 .add-details-content .single-box .bxslider .thumb-box li img{
   width: 138px;
-  height: 78px;
+  height:auto;
   border-radius: 4px;
 }
 
