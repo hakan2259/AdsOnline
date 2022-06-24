@@ -1,0 +1,21 @@
+﻿@model AdsOnline.Models.Entities.Category
+@{
+    ViewBag.Title = "GetCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kategori Güncelleme</h2>
+<br />
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control mt-2" })
+    @Html.Label("Kategori Açıklaması", new { @class = "mt-2" })
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control mt-2 mb-3" })
+    @Html.Label("Kategori Icon", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control mt-2 mb-3" })
+    @Html.HiddenFor(x => x.Id)
+</div>
+<button class="btn btn-warning">Güncelle</button>
+}

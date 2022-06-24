@@ -1,0 +1,56 @@
+﻿@model List<AdsOnline.Models.Entities.User>
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card mb-4">
+    <div class="card-header" style="display:flex; justify-content:space-between; align-items:center">
+        <i class="fas fa-table me-1"></i>
+        <span style="font-weight:bold;">İlan Listesi</span>
+        <a href="/Admin/CreateUser" class="btn btn-primary">Yeni Kullanıcı</a>
+    </div>
+
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Image</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.FirstName</td>
+                        <td>@user.LastName</td>
+                        <td>
+                            <img src="@user.Image" alt="Alternate Text" style="width:100px; height:auto;" />
+
+                        </td>
+                        <td>@user.Email</td>
+                        <td>@user.Password</td>
+                        
+                        <td>@user.Phone</td>
+                        <td>@user.Address</td>
+
+                        <td><a href="/Admin/DeleteUser/@user.Id" class="btn btn-danger">Sil</a></td>
+                        
+                        <td><a href="/ADmin/GetUser/@user.Id" class="btn btn-success">Güncelle</a></td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

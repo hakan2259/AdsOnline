@@ -1,0 +1,145 @@
+﻿@model AdsOnline.Models.Entities.Advert
+@{
+    ViewBag.Title = "GetAdvertDetail";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from azim.commonsupport.com/Clasifico/browse-ads-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Jun 2022 09:28:37 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="~/Clasifico/assets/css/font-awesome-all.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/flaticon.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/owl.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/animate.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/nice-select.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/color.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/style.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/responsive.css" rel="stylesheet">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper">
+
+        <!-- browse-add-details -->
+        <section class="browse-add-details bg-color-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="add-details-content">
+                            <div class="content-one single-box">
+                                <div class="text">
+                                    <h6>@Model.Category.Name</h6>
+                                    <h4>@Model.Title</h4>
+                                </div>
+                            </div>
+                            <div class="content-two single-box">
+                                <div class="bxslider">
+                                   
+                                   
+                                    <div class="slider-content">
+                                        <div class="product-image">
+                                            <figure class="image"><img src="@Model.Image" alt=""></figure>
+                                        </div>
+                                        <div class="slider-pager">
+                                            <ul class="thumb-box clearfix">
+                                                <li>
+                                                    <a class="active" data-slide-index="0" href="#"><figure><img src="@Model.Image" alt=""></figure></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                 
+
+
+                                </div>
+                            </div>
+                            <div class="content-one single-box">
+                                <div class="text">
+                                    <h3>İlan Açıklaması</h3>
+                                    <p>@Model.Description</p>
+                     
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="default-sidebar category-sidebar">
+                            <div class="sidebar-widget">
+
+                                <div class="content-three single-box">
+                                    <div class="text">
+                                        <h5>@Model.Price TL</h5>
+                                        <ul class="list-item clearfix">
+                                            <li>Location</li>
+                                            <li>İlan no: @Model.Id</li>
+                                            <li>İlan Tarihi: @Model.AdvertDate</li>
+                                            <li>Durumu: @Model.Status</li>
+                                           
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="far fa-long-arrow-up"></span>
+        </button>
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="~/Clasifico/assets/js/jquery.js"></script>
+    <script src="~/Clasifico/assets/js/popper.min.js"></script>
+    <script src="~/Clasifico/assets/js/bootstrap.min.js"></script>
+    <script src="~/Clasifico/assets/js/owl.js"></script>
+    <script src="~/Clasifico/assets/js/wow.js"></script>
+    <script src="~/Clasifico/assets/js/validation.js"></script>
+    <script src="~/Clasifico/assets/js/jquery.fancybox.js"></script>
+    <script src="~/Clasifico/assets/js/appear.js"></script>
+    <script src="~/Clasifico/assets/js/scrollbar.js"></script>
+    <script src="~/Clasifico/assets/js/jquery.nice-select.min.js"></script>
+    <script src="~/Clasifico/assets/js/bxslider.js"></script>
+
+    <!-- main-js -->
+    <script src="~/Clasifico/assets/js/script.js"></script>
+
+</body><!-- End of .page_wrapper -->
+<!-- Mirrored from azim.commonsupport.com/Clasifico/browse-ads-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Jun 2022 09:29:05 GMT -->
+</html>
+
+

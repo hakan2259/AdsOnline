@@ -1,0 +1,141 @@
+﻿@using AdsOnline.Models.Entities
+@model List<Category>
+@{
+    ViewBag.Title = "CreateAdvert";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+}
+
+<html>
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body>
+    <style>
+        .upload-container {
+            position: relative;
+        }
+
+            .upload-container input {
+                border: 1px solid #92b0b3;
+                background: #f1f1f1;
+                outline: 2px dashed #92b0b3;
+                outline-offset: -10px;
+                padding: 100px 0px 100px 250px;
+                text-align: center !important;
+                width: 500px;
+            }
+
+                .upload-container input:hover {
+                    background: #ddd;
+                }
+
+            .upload-container:before {
+                position: absolute;
+                bottom: 50px;
+                left: 245px;
+                content: " (or) Drag and Drop files here. ";
+                color: #3f8188;
+                font-weight: 900;
+            }
+
+        .upload-btn {
+            margin-left: 300px;
+            padding: 7px 20px;
+        }
+    </style>
+
+
+
+    <form method="post" id="myForm" action="/ClientAdvert/CreateAdvert" enctype="multipart/form-data">
+
+
+        <div class="auto-container">
+
+
+            <div class="form-group">
+                <label for="exampleInputTitle">İlan Başlığı</label>
+                <input type="text" class="form-control" name="Title" id="exampleInputTitle" placeholder="Enter title">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Kategori</label>
+
+                        <select class="form-control" id="exampleFormControlSelect1" name="CategoryId">
+                            <option>---Kategori Seçiniz---</option>
+
+                                @foreach (var category in Model)
+                                {
+                                    <option value="@category.Id">@category.Name</option>
+                                }
+                                
+                        </select>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputTitle">Fiyat ₺</label>
+                        <input type="text" class="form-control" name="Price" id="exampleInputPrice" placeholder="Enter price">
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Açıklama</label>
+                <textarea class="textarea" placeholder="Place some text here" name="Description"
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputTitle">Adres</label>
+                <input type="text" class="form-control" name="Address" id="exampleInputAddress" placeholder="Enter adres">
+            </div>
+            <label for="exampleInputTitle">Resimler </label>
+            <div class="upload-container">
+                <input type="file" id="images" name="Image"/>
+            </div>
+            <div id="preview" class="mt-3"></div>
+
+            <br />
+            <button type="submit" class="btn btn-primary">EKLE</button>
+        </div>
+
+    </form>
+
+    <div id="loading" style=" visibility: hidden;">Sending..</div>
+
+    <div id="response">
+    </div>
+ 
+ 
+ 
+    <script>
+        const images = document.getElementById('images'),
+            preview = document.getElementById('preview');
+
+        images.addEventListener('change', function () {
+            preview.innerHTML = '';
+            [...this.files].map(file => {
+                const reader = new FileReader();
+                reader.addEventListener('load', function () {
+                    const image = new Image();
+                    image.height = 200;
+                    image.width = 200;
+                    image.title = file.name;
+                    image.src = this.result;
+                    preview.appendChild(image);
+                });
+                reader.readAsDataURL(file);
+            })
+        })
+    </script>
+
+
+
+</body>
+</html>
+

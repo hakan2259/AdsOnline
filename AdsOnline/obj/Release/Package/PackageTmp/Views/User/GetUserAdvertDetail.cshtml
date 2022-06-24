@@ -1,0 +1,172 @@
+﻿@model AdsOnline.Models.Entities.Advert
+@{
+    ViewBag.Title = "GetAdvertDetail";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from azim.commonsupport.com/Clasifico/browse-ads-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Jun 2022 09:28:37 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="~/Clasifico/assets/css/font-awesome-all.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/flaticon.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/owl.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/animate.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/nice-select.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/color.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/style.css" rel="stylesheet">
+    <link href="~/Clasifico/assets/css/responsive.css" rel="stylesheet">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+    <section class="page-title-2" style="background-image: url(assets/images/background/page-title-2.jpg);">
+        <div class="auto-container">
+            <div class="content-box">
+                <h1>@Model.Title</h1>
+                <span class="category"><i class="fas fa-tags"></i>@Model.Category.Name</span>
+            </div>
+            <div class="info-box clearfix">
+                <div class="left-column pull-left clearfix">
+                    <div class="image-box"><img src="assets/images/resource/admin-1.png" alt=""></div>
+                    <h4>Michael Bean<i class="icon-18"></i></h4>
+                    <ul class="rating clearfix">
+                        <li><i class="icon-17"></i></li>
+                        <li><i class="icon-17"></i></li>
+                        <li><i class="icon-17"></i></li>
+                        <li><i class="icon-17"></i></li>
+                        <li><i class="icon-17"></i></li>
+                        <li><a href="index.html">(32)</a></li>
+                    </ul>
+                    <span class="sell">For sell</span>
+                    <h5><span>Start From:</span>@Model.Price ₺</h5>
+                </div>
+                <div class="right-column pull-right clearfix">
+                    <ul class="links-list clearfix">
+                        <li class="share-option">
+                            <a href="browse-add-details.html" class="share-btn"><i class="fas fa-share-alt"></i></a>
+                            <ul>
+                                <li><a href="browse-add-details.html"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="browse-add-details.html"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="browse-add-details.html"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="browse-add-details.html"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="browse-add-details.html"><i class="icon-21"></i></a></li>
+                        <li><a href="browse-add-details.html"><i class="icon-22"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="boxed_wrapper">
+
+        <!-- browse-add-details -->
+        <section class="browse-add-details bg-color-2 mt-5">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="add-details-content">
+
+                            <div class="content-two single-box">
+                                <div class="bxslider">
+
+
+                                    <div class="slider-content">
+                                        <div class="product-image">
+                                            <figure class="image"><img src="@Model.Image" alt="" style="width:450px; height:auto;"></figure>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="content-one single-box">
+                                <div class="text">
+                                    <h3>İlan Açıklaması</h3>
+                                    <p>@Model.Description</p>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="default-sidebar category-sidebar">
+                            <div class="sidebar-widget">
+
+                                <div class="content-three single-box">
+                                    <div class="text">
+                                        <h5>İlan No: @Model.Id</h5>
+                                        <ul class="list-item clearfix">
+                                            <li>Location</li>
+
+                                            <li>İlan Tarihi: @Model.AdvertDate</li>
+                                            <li>Durumu: @Model.Status</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="far fa-long-arrow-up"></span>
+        </button>
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="~/Clasifico/assets/js/jquery.js"></script>
+    <script src="~/Clasifico/assets/js/popper.min.js"></script>
+    <script src="~/Clasifico/assets/js/bootstrap.min.js"></script>
+    <script src="~/Clasifico/assets/js/owl.js"></script>
+    <script src="~/Clasifico/assets/js/wow.js"></script>
+    <script src="~/Clasifico/assets/js/validation.js"></script>
+    <script src="~/Clasifico/assets/js/jquery.fancybox.js"></script>
+    <script src="~/Clasifico/assets/js/appear.js"></script>
+    <script src="~/Clasifico/assets/js/scrollbar.js"></script>
+    <script src="~/Clasifico/assets/js/jquery.nice-select.min.js"></script>
+    <script src="~/Clasifico/assets/js/bxslider.js"></script>
+
+    <!-- main-js -->
+    <script src="~/Clasifico/assets/js/script.js"></script>
+
+</body><!-- End of .page_wrapper -->
+<!-- Mirrored from azim.commonsupport.com/Clasifico/browse-ads-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Jun 2022 09:29:05 GMT -->
+</html>

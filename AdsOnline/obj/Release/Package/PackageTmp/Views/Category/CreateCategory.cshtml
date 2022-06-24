@@ -1,0 +1,24 @@
+﻿@model AdsOnline.Models.Entities.Category
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<h2>Yeni Kategori Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Kategori Adı:")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control mt-2" })
+    @Html.Label("Kategori Açıklaması:", new { @class = "mt-2" })
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control mt-2" })
+    @Html.Label("Kategori Icon:", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control mt-2" })
+    <button class="btn btn-info mt-3" id="Btn1">Kaydet</button>
+    <script>
+        $('#Btn1').click(function () {
+            alert("Kategori başarılı bir şekilde eklendi!");
+        })
+    </script>
+
+</form>
+
