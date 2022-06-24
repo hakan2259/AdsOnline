@@ -1,17 +1,90 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<!-- Page Title -->
+<section class="page-title style-two" style="background-image: url(assets/images/background/page-title.jpg);">
+    <div class="auto-container">
+        <div class="content-box centred mr-0">
+            <div class="title">
+                <h1>Bizimle İletişime Geçin</h1>
+            </div>
+            <ul class="bread-crumb clearfix">
+                <li><a href="/">Home</a></li>
+                <li>İletişim</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- contact-section -->
+<section class="contact-section bg-color-2">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-lg-4 col-md-12 col-sm-12 info-column">
+                <div class="contact-info-inner">
+                  
+                    <div class="single-box">
+                        <h3>Açılış saati</h3>
+                        <ul class="list clearfix">
+                            <li>Haftaiçi: Sabah 9.30 Akşam 18:00</li>
+                            <li>Pazar Tatil: Kapalıyız</li>
+                        </ul>
+                    </div>
+                    <div class="single-box">
+                        <h3>İletişim Bilgileri</h3>
+                        <ul class="list clearfix">
+                            <li>Tekirdağ <br />Çorlu</li>
+                            <li><a href="mailto:example@info.com">corlu@gmail.com</a></li>
+                            <li><a href="tel:6174959400326">02827174541</a></li>
+                        </ul>
+                    </div>
+                    <div class="single-box">
+                        <h3>Sosyal Medya</h3>
+                        <ul class="social-links clearfix">
+                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
+                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 form-column">
+                <div class="form-inner">
+                    <h2>Temasta Kal</h2>
+                    <form method="post" action="/Home/Contact" id="contact-form" class="default-form">
+                        <div class="row clearfix">
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>İsim Soyisim *</label>
+                                <input type="text" name="UserName" required="">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                <label>E-Posta *</label>
+                                <input type="email" name="Email" required="">
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                <label>Telefon</label>
+                                <input type="text" name="Phone" required="">
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                <label>Konu</label>
+                                <input type="text" name="Subject" required="">
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                <label>Mesajınız...</label>
+                                <textarea name="Message"></textarea>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                <button class="theme-btn-one" type="submit" name="submit-form">Gönder</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact-section end -->

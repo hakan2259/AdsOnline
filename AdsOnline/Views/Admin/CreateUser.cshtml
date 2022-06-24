@@ -1,0 +1,30 @@
+﻿@model AdsOnline.Models.Entities.User
+@{
+    ViewBag.Title = "CreateUser";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Kullanıcı Sayfası</h2>
+
+<br />
+@using (Html.BeginForm("CreateUser", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.Label("FirstName:")
+    @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control mt-2" })
+    @Html.Label("LastName:", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.LastName, new { @class = "form-control mt-2" })
+    @Html.Label("Kullanıcı Görsel:", new { @class = "mt-2" })
+    @*@Html.TextBoxFor(x => x.Image, new { @class = "form-control mt-2" })*@
+    <input type="file" name="Image" class="mt-2"/>
+    <br />
+    @Html.Label("Email:", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control mt-2" })
+    @Html.Label("Password:", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control mt-2" })
+    @Html.Label("Phone:", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control mt-2" })
+    @Html.Label("Address:", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control mt-2" })
+    <button class="btn btn-info mt-3">Kaydet</button>
+}

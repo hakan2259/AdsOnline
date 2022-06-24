@@ -1,0 +1,22 @@
+﻿@model AdsOnline.Models.Entities.Admin
+@{
+    ViewBag.Title = "CreateAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Yönetici Sayfası</h2>
+
+<br />
+@using (Html.BeginForm("CreateAdmin", "Admin", FormMethod.Post))
+{
+
+    @Html.Label("Kullanıcı Adı:")
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control mt-2" })
+    @Html.Label("Parola:", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control mt-2" })
+    @Html.Label("Yetki:", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Authority, new { @class = "form-control mt-2" })
+
+    <button class="btn btn-info mt-3">Kaydet</button>
+}
+

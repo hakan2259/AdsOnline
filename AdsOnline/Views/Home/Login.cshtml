@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+}
+
+<section class="page-title style-two" style="background-image: url(assets/images/background/page-title.jpg);">
+    <div class="auto-container">
+        <div class="content-box centred mr-0">
+            <div class="title">
+                <h1>Log in</h1>
+            </div>
+            <ul class="bread-crumb clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li>Log in</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- login-section -->
+<section class="login-section bg-color-2">
+    <div class="auto-container">
+        <div class="inner-container">
+            <div class="inner-box">
+                <h2>Log in</h2>
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post)) { 
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" required="">
+                    </div>
+                    
+                    <div class="form-group message-btn">
+                        <button type="submit" class="theme-btn-one">Giriş Yap</button>
+                    </div>
+                }
+                <div class="other-content centred">
+                    
+                    <div class="othre-text">
+                        <p>Hesabınız yok mu? <a href="/Home/SignUp">Kayıt Ol</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- login-section end -->

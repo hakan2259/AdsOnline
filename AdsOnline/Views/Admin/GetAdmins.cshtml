@@ -1,0 +1,48 @@
+﻿@model List<AdsOnline.Models.Entities.Admin>
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card mb-4">
+    <div class="card-header" style="display:flex; justify-content:space-between; align-items:center">
+        <i class="fas fa-table me-1"></i>
+        <span style="font-weight:bold;">İlan Listesi</span>
+        <a href="/Admin/CreateAdmin" class="btn btn-primary">Yeni Yönetici</a>
+    </div>
+
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Kullanıcı Adı</th>
+                    <th>Parola</th>
+                    <th>Yetki</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var admin in Model)
+                {
+                    <tr>
+                        <td>@admin.Id</td>
+                        <td>@admin.UserName</td>
+                        <td>@admin.Password</td>
+                        <td>@admin.Authority</td>
+                        
+                       
+
+                        <td><a href="/Admin/DeleteAdmin/@admin.Id" class="btn btn-danger">Sil</a></td>
+
+                        <td><a href="/Admin/GetAdmin/@admin.Id" class="btn btn-success">Güncelle</a></td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

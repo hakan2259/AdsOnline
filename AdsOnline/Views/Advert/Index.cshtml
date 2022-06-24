@@ -15,7 +15,7 @@
         <table id="datatablesSimple">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>İlan No</th>
                     <th>Başlık</th>
                     <th>Açıklama</th>
                     <th>Fiyat</th>
@@ -23,6 +23,7 @@
                     <th>Durum</th>
                     <th>İmage</th>
                     <th>Kategori</th>
+                    <th>Kullanıcı</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,8 +32,19 @@
                     <tr>
                         <td>@advert.Id</td>
                         <td>@advert.Title</td>
-                        <td>@advert.Description</td>
-                        <td>@advert.Price</td>
+                        <td>
+                            @if (advert.Description.Length > 50)
+                            {
+                                @advert.Description.Substring(1, 50)
+                }
+                else
+                {
+                    @advert.Description
+                }
+
+
+                        </td>
+                        <td>@advert.Price ₺</td>
                         <td>@advert.AdvertDate</td>
                         <td>@advert.Status</td>
                         <td>

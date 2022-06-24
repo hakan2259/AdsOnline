@@ -7,7 +7,7 @@
 
 <h2>İlan Güncelleme Sayfası</h2>
 <br />
-@using (Html.BeginForm("UpdateAdvert", "Advert", FormMethod.Post))
+@using (Html.BeginForm("UpdateAdvert", "Advert", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 <div class="form-group">
     @Html.Label("İlan Başlığı:")
@@ -18,10 +18,12 @@
     @Html.TextBoxFor(x => x.Price, new { @class = "form-control mt-2" })
     @Html.Label("İlan Tarihi:", new { @class = "mt-2" })
     @Html.TextBoxFor(x => x.AdvertDate, new { @class = "form-control mt-2" })
-    @Html.Label("Durum:", new { @class = "mt-2" })
-    @Html.TextBoxFor(x => x.Status, new { @class = "form-control mt-2" })
+    
+   
     @Html.Label("İlan Görsel:", new { @class = "mt-2" })
-    @Html.TextBoxFor(x => x.Image, new { @class = "form-control mt-2" })
+    <img src="@Model.Image" style="width:100px; height:auto;" class="mt-2" />
+    <input name="Image" type="file" />
+    <br />
 
     @Html.Label("Kategori:", new { @class = "mt-2" })
     @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.categories, new { @class = "form-control mt-2 mb-2" })

@@ -17,6 +17,10 @@ namespace AdsOnline.Models.Entities
         [Column(TypeName = "Varchar")]
         [StringLength(100)]
         public string Description { get; set; }
+        [Column(TypeName = "Varchar")]
+        [StringLength(50)]
+        public string Icon { get; set; }
+       
         public virtual ICollection<Advert> Adverts { get; set; }
       
 

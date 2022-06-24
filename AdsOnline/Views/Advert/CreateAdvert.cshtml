@@ -7,19 +7,18 @@
 <h2>Yeni İlan Sayfası</h2>
 
 <br />
-<form class="form-group" method="post">
+<form class="form-group" method="post" enctype="multipart/form-data">
     @Html.Label("İlan Başlığı:")
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control mt-2" })
     @Html.Label("İlan Açıklaması:", new { @class = "mt-2" })
     @Html.TextAreaFor(x => x.Description, new { @class = "form-control mt-2" })
     @Html.Label("Fiyat:", new { @class = "mt-2" })
     @Html.TextBoxFor(x => x.Price, new { @class = "form-control mt-2" })
-    @Html.Label("İlan Tarihi:", new { @class = "mt-2" })
-    @Html.TextBoxFor(x => x.AdvertDate, new { @class = "form-control mt-2" })
-    @Html.Label("Durum:", new { @class = "mt-2" })
-    @Html.TextBoxFor(x => x.Status, new { @class = "form-control mt-2" })
+   
+    
     @Html.Label("İlan Görsel:", new { @class = "mt-2" })
-    @Html.TextBoxFor(x => x.Image, new { @class = "form-control mt-2" })
+    <input name="Image" type="file" />
+    <br />
 
     @Html.Label("Kategori:", new { @class = "mt-2" })
     @Html.DropDownListFor(x => x.CategoryId,(List<SelectListItem>)ViewBag.categories, new {@class = "form-control mt-2"})

@@ -13,6 +13,8 @@
     @Html.TextBoxFor(x => x.Name, new { @class = "form-control mt-2" })
     @Html.Label("Kategori Açıklaması", new { @class = "mt-2" })
     @Html.TextAreaFor(x => x.Description, new { @class = "form-control mt-2 mb-3" })
+    @Html.Label("Kategori Icon", new { @class = "mt-2" })
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control mt-2 mb-3" })
     @Html.HiddenFor(x => x.Id)
 </div>
 <button class="btn btn-warning">Güncelle</button>

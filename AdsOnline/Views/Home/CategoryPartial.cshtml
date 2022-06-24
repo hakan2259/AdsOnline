@@ -1,0 +1,31 @@
+﻿@using AdsOnline.Models.Entities
+@model List<Category>
+
+ <!-- category-section -->
+<section class="category-section centred sec-pad">
+    <div class="auto-container">
+        <div class="sec-title">
+            <span>Kategoriler</span>
+            <h2>Kategorilere Göre Keşfet</h2>
+           
+        </div>
+        <div class="inner-content clearfix">
+            @foreach (var category in Model)
+            {
+                <div class="category-block-one wow fadeInDown animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                     
+                        <a href="/Home/GetAdvertByCategory/@category.Id">
+                            <div class="icon-box"><i class="@category.Icon"></i></div>
+                            <h5>@category.Name</h5>
+                        </a>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+        
+    </div>
+</section>
+<!-- category-section end -->

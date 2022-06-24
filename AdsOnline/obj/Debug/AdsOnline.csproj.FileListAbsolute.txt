@@ -72,7 +72,6 @@ C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\System.Web.WebPages.Razor.x
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\Newtonsoft.Json.xml
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\Antlr3.Runtime.pdb
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\obj\Debug\AdsOnline.csproj.AssemblyReference.cache
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\obj\Debug\AdsOnline.csproj.CoreCompileInputs.cache
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\obj\Debug\AdsOnline.csproj.CopyComplete
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\obj\Debug\AdsOnline.dll
@@ -81,3 +80,8 @@ C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\EntityFramework.dll
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\EntityFramework.SqlServer.dll
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\EntityFramework.xml
 C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\obj\Debug\AdsOnline.csproj.AssemblyReference.cache
+C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\PagedList.dll
+C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\PagedList.Mvc.dll
+C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\PagedList.xml
+C:\Users\hakan22\Desktop\ADs\AdsOnline\AdsOnline\bin\PagedList.Mvc.xml

@@ -2968,7 +2968,7 @@ div#mCSB_1_container{
   margin: 0px;
 }
 
-.subscribe-section .subscribe-form .form-group input[type='email']{
+.subscribe-section .subscribe-form .form-group input[type='text']{
   position: relative;
   display: block;
   width: 100%;

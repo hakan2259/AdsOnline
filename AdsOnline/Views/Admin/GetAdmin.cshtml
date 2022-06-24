@@ -1,0 +1,27 @@
+﻿@model AdsOnline.Models.Entities.Admin
+@{
+    ViewBag.Title = "GetAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yönetici Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("UpdateAdmin", "Admin", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("UserName:")
+        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control mt-2" })
+        @Html.Label("Password:", new { @class = "mt-2" })
+        @Html.TextAreaFor(x => x.Password, new { @class = "form-control mt-2" })
+
+
+        @Html.Label("Yetki:", new { @class = "mt-2" })
+        @Html.TextBoxFor(x => x.Authority, new { @class = "form-control mt-2" })
+      
+
+
+        @Html.HiddenFor(x => x.Id)
+    </div>
+    <button class="btn btn-warning mt-2">Güncelle</button>
+}
+
